@@ -1,0 +1,26 @@
+version: "3"
+services:
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/frontend
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports: 
+      - "5000:5000"
+    environment:
+      FLASK_APP: hello.py
+      FLASK_ENV: development
+      PYTHONUNBUFFERED: 1
+    volumes:
+      - ./backend:/backend
+    depends_on:
+      - database
+
+  database:
+    expose:
+      - 6379
+    build: ./database
