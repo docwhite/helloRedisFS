@@ -17,12 +17,12 @@ use on more complex projects:
 * Redis database.
 * Docker Compose to orchestrate.
 
-To run it, have Docker installed and on a terminal:::
+To run it, have Docker installed and on a terminal: ::
 	git clone https://github.com/docwhite/helloRedisFS
 	cd helloRedisFS
 	docker-compose up
 
-Here is an example output log:::
+Here is an example output log: ::
 
 	backend_1   | 172.21.0.4 - - [08/Jul/2018 20:34:23] "GET /spawn HTTP/1.1" 200 -
 	frontend_1  | Job 287 dispatched.
@@ -33,7 +33,7 @@ Here is an example output log:::
 	frontend_1  | Job 287 progress: 3%
 	backend_1   | Updated job 287 progress (4%) and published to redis.
 	frontend_1  | Job 287 progress: 4%
-  ...
+	[...]
 	backend_1   | Updated job 287 progress (99%) and published to redis.
 	frontend_1  | Job 287 progress: 100%
 	frontend_1  | Task completed. Unsubscribing and closing connection.
