@@ -2,6 +2,8 @@ version: "3"
 services:
   frontend:
     build: ./frontend
+    ports:
+      - "80:80"
     volumes:
       - ./frontend:/frontend
     depends_on:

@@ -22,4 +22,4 @@ class Job(threading.Thread):
             ))
 
             # Simulate slow task by sleeping.
-            time.sleep(0.2)
+            time.sleep(0.1)
