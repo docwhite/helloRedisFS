@@ -35,8 +35,9 @@ Here is an example output log:
 	backend_1   | Updated job 287 progress (4%) and published to redis.
 	frontend_1  | Job 287 progress: 4%
 	[...]
-	backend_1   | Updated job 287 progress (99%) and published to redis.
-	frontend_1  | Job 287 progress: 100%
-	frontend_1  | Task completed. Unsubscribing and closing connection.
 	backend_1   | Updated job 287 progress (100%) and published to redis.
+	frontend_1  | Job 287 progress: 100%
+	frontend_1  | Task completed. Unsubscribing from 287.
 
+You can also access http://localhost and spawn various jobs by clicking the
+button.
