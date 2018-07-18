@@ -2,6 +2,8 @@
 Simple example to show redis PubSub capabilities. Frontend asks backend to
 spawn a job on a Python backend and monitors it's progress.
 
+![Example Outputs](fs.png?raw=true "Example Outputs")
+
 The way the progress is passed is through publishing to a channel on the redis
 database. The channel name in this case is the job id. The frontend is
 subscribed to this channel so everytime the backend publishes the frontend
